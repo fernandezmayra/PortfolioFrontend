@@ -1,0 +1,150 @@
+*{
+  background-color: black;
+}
+.row{
+    background-color: black;
+    color:white;
+    font-family: ITC Benguiat;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    margin:0;
+}
+.cont, .cont2{
+  margin-top:-50px;
+}
+.cont{
+  display:flex;
+  justify-content: flex-end;
+}
+h1{
+    text-align: center;
+    color:#fff;
+}
+.redes {
+    display:flex;
+    font-size:26px;
+}
+.redes a{
+    display:flex;
+    color:white;
+    width:60px;
+    height:60px;
+    border: 1px solid white;
+    border-radius:50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.redes a + a{
+    margin-left:20px;
+}
+#contact{
+    font-size:20px;
+    margin:0.2em 0;
+}
+#email{
+    text-decoration:none;
+    color: white;
+}
+h1 span{
+   display:inline-block;
+}
+h1 span:hover{
+    animation: animar-texto 1s ease-in-out 1 normal both;
+  }
+  @keyframes animar-texto{
+    from{
+      transform:scale3d(1,1,1);
+    }
+    40%{
+      transform:scale3d(.75,1.25,1);
+      color:red;
+    }
+    50%{
+      transform:scale3d(1.15,0.85,1);
+      
+    }
+    65%{
+      transform:scale3d(.95,1.05,1);
+      
+    }
+    75%{
+      transform:scale3d(1.05,0.95,1);
+      color:#fff;
+    }
+    to{
+      transform:scale3d(1,1,1);
+    }
+  }
+a:hover{
+  animation: saltar 1s ease-out 1 normal both;
+}
+@keyframes saltar{
+  from,
+  65%,
+  85%,
+  to{
+    transform:translateY(0) scale(1,1);
+  }
+  15%{
+    transform:translateY(-1rem) scale(1,1.2);
+  }
+  35%,
+  45%{
+  transform:translateY(-1.5rem) scale(1,1.08);
+  }
+  75%{
+    transform:translateY(.5rem) scale(1.2,.8);
+  }
+  95%{
+    transform:translateY(0) scale(1.05,1.05);
+  }
+}
+#fotodeperfil{
+  max-width:300px;
+  max-height:380px;
+}
+#about:before {       
+    display: block;       
+    content: " ";     
+    margin-top: 50px;       
+    height: 120px;       
+    visibility: hidden; 
+} 
+#email:hover{
+  color:red;
+}
+a{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+@media (max-width:767px){
+  .row{
+    height:100vh;
+  }
+  .cont{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .cont2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #fotodeperfil{
+    margin-top:175px;
+    width:200px;
+    height:280px;
+    margin-bottom:50px;
+  }
+  h1{
+    position:absolute;
+    margin-top: -100px;
+  }
+}
+
+
+
