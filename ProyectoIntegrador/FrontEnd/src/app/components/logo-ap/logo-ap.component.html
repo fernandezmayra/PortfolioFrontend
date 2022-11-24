@@ -7,11 +7,12 @@
                 <div class="cont-menu">
                     <nav>
                         <ul>
-                            <li><a routerLink="/home">HOME</a></li>
-                            <li><a routerLink="/about-me">ABOUT ME</a></li>
-                            <li><a routerLink="/education-experience">EDUCATION & EXPERIENCE</a></li>
-                            <li><a routerLink="/skills">SKILLS</a></li>
-                            <li><a routerLink="/projects">PROJECTS</a></li>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#about">ABOUT ME</a></li>
+                            <li><a href="#education">EDUCATION</a></li>
+                            <li><a href="#experience">EXPERIENCE</a></li>
+                            <li><a href="#skills">SKILLS</a></li>
+                            <li><a href="#projects">PROJECTS</a></li>
                         </ul>
                     </nav>
                     <label for="btn-menu" class="icon-equis"><i class="fa fa-close"></i></label>
@@ -23,7 +24,8 @@
             <a href="https://github.com/fernandezmayra" target="_blank"><i class="fa fa-github"></i></a>
             <a href="https://www.facebook.com/mayra.fernandez.silva" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href=""><i class="fa fa-instagram"></i></a>
-            <button type="button" class="btn btn-outline-light login">Login</button>
+            <button type="button" class="btn btn-outline-light login" (click)="login()" *ngIf="!isLogged">Login</button>
+            <button type="button" class="btn btn-outline-light login" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
         </div>
     </div>
 </div>

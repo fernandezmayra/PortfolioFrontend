@@ -3,11 +3,16 @@
     align-items: center;
     justify-content: center;
     background-color:black;
-    height:100vh;
     width:100vw;
     font-family:ITC Benguiat;
     color:#fff;
     margin:0;
+    padding:0;
+}
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container{
     position:relative;
@@ -142,4 +147,7 @@ img{
 }
 .percent:hover img{
     filter:grayscale(0);
+}
+.btn-danger{
+    margin: 10px;
 }

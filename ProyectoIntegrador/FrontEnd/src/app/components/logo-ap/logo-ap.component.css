@@ -1,15 +1,16 @@
 .row{
     width:100vw;
+    margin:0;
+    padding:0;
 }
 .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0;
     position:fixed;
     height:75px;
     z-index:3;
-    background-color:black;
+    background-color:transparent;
 }
 .redes {
     display:flex;
@@ -18,7 +19,6 @@
     display:none;
 }
 .menu{
-    margin-left:20px;
     filter:invert(1);
     margin-top:0;
 }
@@ -29,7 +29,7 @@ label:hover{
     cursor:pointer;
 }
 .btn{
-    margin-right:5px;
+    margin-right:20px;
     margin-left:5px;
     font-family: ITC Benguiat;
 }
@@ -116,23 +116,23 @@ ul{
     height:70px;
     margin-top:0;
 }
-.fa-navicon{
-    margin-left:10px;
-}
 @media (max-width:395px){
     .redes a{
         width:30px;
         height:30px;
         margin-top:5px;
+        margin-right:2px;
+        margin-left:2px;
     }
 }
 @media (max-width:365px){
     .btn{
-        width:60px;
+        width:50px;
         height:30px;
         margin-top:5px;
         padding-left:5px;
         padding-top:2px;
+        font-size: 10px;
     }
 }
 

@@ -1,21 +1,21 @@
-*{
-    background-color: black;
-}
 .row{
     display:flex;
     background: black;
     color:white;
     width:100vw;
-    height:100vh;
-    margin:0;
     font-family: ITC Benguiat;
+    margin:0;
+    padding:0;
 }
-.cont{
-    display:flex;
-    justify-content: center;
+td{
+    color:#fff;
 }
-.cont2{
-    justify-content: flex-start;
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.timeline{
+    display: flex;
 }
 .timeline__item{
     position:relative;
@@ -55,17 +55,17 @@
 #education:before {       
     display: block;       
     content: " ";     
-    margin-top: 0;       
-    height: 120px;       
-    visibility: hidden; 
-} 
-#experience:before {       
-    display: block;       
-    content: " ";     
-    margin-top: 0;       
+    margin-top: 0px;       
     height: 120px;       
     visibility: hidden; 
 } 
 h3{
     font-size:19px;
+}
+.btn-danger{
+    margin:10px;
+}
+
+.botones{
+    display:flex;
 }
