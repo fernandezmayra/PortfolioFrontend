@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfolio.mcfs.Controller;
 
 import com.portfolio.mcfs.Dto.dtoExperiencia;
@@ -56,7 +51,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
         
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE(), dtoexp.getInicio(), dtoexp.getFin());
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
@@ -77,6 +72,8 @@ public class CExperiencia {
         
         experiencia.setNombreE(dtoexp.getNombreE());
         experiencia.setDescripcionE(dtoexp.getDescripcionE());
+        experiencia.setInicio(dtoexp.getInicio());
+        experiencia.setFin(dtoexp.getFin());
         
         sExperiencia.save(experiencia);
         

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfolio.mcfs.Controller;
 
 import com.portfolio.mcfs.Dto.dtoEducacion;
@@ -63,7 +58,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         
-        Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE());
+        Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE(), dtoeducacion.getInicio(), dtoeducacion.getFin());
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
     }
@@ -81,6 +76,8 @@ public class CEducacion {
         
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
+        educacion.setInicio(dtoeducacion.getInicio());
+        educacion.setFin(dtoeducacion.getFin());
         
         sEducacion.save(educacion);
         
