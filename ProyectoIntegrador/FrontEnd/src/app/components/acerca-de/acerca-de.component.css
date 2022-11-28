@@ -65,6 +65,17 @@ h1{
     font-size:20px;
   }
 }
+#contacto{
+  font-size: 20px;
+}
+#email{
+  text-decoration: none;
+  color:#fff;
+}
+#email:hover{
+  color:#f00;
+}
+
 
 
 

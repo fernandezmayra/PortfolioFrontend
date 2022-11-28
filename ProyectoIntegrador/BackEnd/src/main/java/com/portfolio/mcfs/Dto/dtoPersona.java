@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.portfolio.mcfs.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- *
- * @author User
- */
 public class dtoPersona {
     @NotBlank
     private String nombre;
@@ -20,15 +11,21 @@ public class dtoPersona {
     private String descripcion;
     @NotBlank
     private String img;
+    @NotBlank
+    private String titulo;
+    @NotBlank
+    private String email;
 
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String descripcion, String img) {
+    public dtoPersona(String nombre, String apellido, String descripcion, String img, String titulo, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
+        this.titulo = titulo;
+        this.email = email;
     }
 
     public String getNombre() {
@@ -61,6 +58,22 @@ public class dtoPersona {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }

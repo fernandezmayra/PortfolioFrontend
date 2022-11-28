@@ -25,20 +25,23 @@ public class Persona {
     private String descripcion;
     
     @NotNull
-    private String ocupacion;
+    private String titulo;
+    
+    @NotNull
+    private String email;
             
     private String img;
 
     public Persona() {
     }
 
-    public Persona(int id, String nombre, String apellido, String descripcion, String img, String ocupacion) {
+    public Persona(int id, String nombre, String apellido, String descripcion, String img, String titulo, String email) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
-        this.ocupacion = ocupacion;
+        this.titulo = titulo;
     }
 
     public int getId() {
@@ -81,12 +84,20 @@ public class Persona {
         this.img = img;
     }
 
-    public String getOcupacion() {
-        return ocupacion;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setOcupacion(String ocupacion) {
-        this.ocupacion = ocupacion;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-    
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+ 
 }
