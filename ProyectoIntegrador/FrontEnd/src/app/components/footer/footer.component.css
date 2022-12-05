@@ -11,4 +11,6 @@ footer{
     flex-direction: column;
     text-align:center;
     font-family: ITC Benguiat;
+    position:absolute;
+    background-color:black;
 }

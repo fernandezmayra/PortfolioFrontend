@@ -111,10 +111,39 @@ ul{
     align-items: center;
     justify-content: center;
 }
+.p1{
+    width:30px;
+    height:25px;
+    background-color: transparent;
+    border:1px solid white;
+    border-radius:10%;
+    padding-left:5px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+    color:white;
+    display:flex;
+}
+h1{
+    font-size:11px;
+    line-height: 0;
+    margin-left:10px;
+    margin-top:5px;
+}
+a:hover p{
+    color:red;
+}
+a:hover .p1{
+    border-color:red;
+    background-color: transparent;
+}
+
 #ap{
-    width:120px;
-    height:70px;
-    margin-top:0;
+    margin-left:10px;
+    margin-top:20px;
 }
 @media (max-width:395px){
     .redes a{

@@ -84,6 +84,7 @@ public class PersonaController {
         persona.setImg(dtopersona.getImg());
         persona.setTitulo(dtopersona.getTitulo());
         persona.setEmail(dtopersona.getEmail());
+        persona.setImgBackground(dtopersona.getImgBackground());
         
         personaService.save(persona);
         

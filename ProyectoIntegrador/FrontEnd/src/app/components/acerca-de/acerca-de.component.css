@@ -29,7 +29,7 @@ h1{
 }
 #fotodeperfil{
   max-width:300px;
-  max-height:380px;
+  max-height:300px;
 }
 #about:before {       
     display: block;       
@@ -64,9 +64,6 @@ h1{
   h3{
     font-size:20px;
   }
-}
-#contacto{
-  font-size: 20px;
 }
 #email{
   text-decoration: none;

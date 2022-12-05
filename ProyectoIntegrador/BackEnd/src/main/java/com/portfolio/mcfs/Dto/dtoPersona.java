@@ -15,17 +15,20 @@ public class dtoPersona {
     private String titulo;
     @NotBlank
     private String email;
+    @NotBlank
+    private String imgBackground;
 
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String descripcion, String img, String titulo, String email) {
+    public dtoPersona(String nombre, String apellido, String descripcion, String img, String titulo, String email, String imgBackground) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
         this.titulo = titulo;
         this.email = email;
+        this.imgBackground = imgBackground;
     }
 
     public String getNombre() {
@@ -74,6 +77,14 @@ public class dtoPersona {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImgBackground() {
+        return imgBackground;
+    }
+
+    public void setImgBackground(String imgBackground) {
+        this.imgBackground = imgBackground;
     }
     
 }

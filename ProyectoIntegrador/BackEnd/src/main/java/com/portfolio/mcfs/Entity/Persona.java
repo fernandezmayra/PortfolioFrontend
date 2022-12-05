@@ -31,17 +31,20 @@ public class Persona {
     private String email;
             
     private String img;
-
+    
+    private String imgBackground;
+    
     public Persona() {
     }
 
-    public Persona(int id, String nombre, String apellido, String descripcion, String img, String titulo, String email) {
+    public Persona(int id, String nombre, String apellido, String descripcion, String img, String titulo, String email, String imgBackground) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
         this.titulo = titulo;
+        this.imgBackground = imgBackground;
     }
 
     public int getId() {
@@ -98,6 +101,14 @@ public class Persona {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImgBackground() {
+        return imgBackground;
+    }
+
+    public void setImgBackground(String imgBackground) {
+        this.imgBackground = imgBackground;
     }
  
 }
