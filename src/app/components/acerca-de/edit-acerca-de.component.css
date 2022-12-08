@@ -14,7 +14,7 @@
 }
 form{
   width:350px;
-  height:420px;
+  min-height:420px;
 }
 .form-group input{
    background-color:transparent;

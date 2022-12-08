@@ -1,14 +1,20 @@
 <div class="row">
-        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-            <h2>LOGIN</h2>
-            <div class="inputBox">
-                <input type="email" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
-                <span>User</span>
-            </div>
-            <div class="inputBox">
-                <input type="password" id="password" name="password" [(ngModel)]="password" required>
-                <span>Password</span>
-            </div>
-            <input type="submit" name="" value="Login">
-        </form>
+    <div class="container">
+        <div class="box">
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                <h2>Login</h2>
+                <div class="inputBox">
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+                    <span>Password</span>
+                    <i></i>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 </div>

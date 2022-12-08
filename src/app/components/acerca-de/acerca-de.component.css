@@ -60,11 +60,6 @@ h1{
     margin-bottom:50px;
   }
 }
-@media (max-width:380px){
-  h3{
-    font-size:20px;
-  }
-}
 #email{
   text-decoration: none;
   color:#fff;
@@ -72,6 +67,17 @@ h1{
 #email:hover{
   color:#f00;
 }
+@media (max-width:380px){
+  h3{
+    font-size:20px;
+  }
+}
+@media (max-width:280px){
+  #email{
+    font-size: 13px;
+  }
+}
+
 
 
 

@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     background-color: black;
+    min-height: 100vh;
 }
 .row{
     background-color: #000;
@@ -68,8 +69,11 @@ h1{
 .btn-edit{
     margin-right: 10px;
 }
+.btn-danger{
+    font-family: ITC Benguiat;
+}
 @media (max-width:991px){
-    .row{
+    .proy{
         display:flex;
         justify-content: center;
         align-items: center;

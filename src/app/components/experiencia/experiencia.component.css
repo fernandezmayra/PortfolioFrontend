@@ -65,7 +65,11 @@ h3{
 .btn-danger{
     margin:10px;
 }
-
 .botones{
     display:flex;
+}
+@media (max-width:280px){
+    .btn-danger{
+        margin:2px;
+    }
 }
