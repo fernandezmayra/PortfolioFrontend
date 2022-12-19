@@ -9,10 +9,21 @@
                 <label for="descProy">Descripción del proyecto</label>
                 <input type="text" class="form-control" id="descProy" name="descProy" [(ngModel)] = "descProy" required>
             </div>
-            <div class="add">
-                <button class="btn btn-danger">
-                    Agregar proyecto
-                </button>
+            <div class="form-group">
+                <label for="imgProy">Imagen del proyecto</label>
+                <input type="file" class="form-control" id="imgProy" name="imgProy" [(ngModel)] = "imgProy" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png" required>
+            </div>
+            <div class="botones">
+                <div class="add">
+                    <button class="btn btn-dark">
+                        Agregar proyecto
+                    </button>
+                </div>
+                <div class="cancel">
+                    <button class="btn btn-danger" routerLink="">
+                        Cancelar
+                    </button>
+                </div>
             </div>
         </form>
     </div>

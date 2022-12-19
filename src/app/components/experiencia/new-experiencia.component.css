@@ -22,9 +22,13 @@ form{
    color:#fff;
    margin-bottom: 20px;
 }
+.botones{
+    display:flex;
+}
 .add{
     display: flex;
     justify-content: center;
+    margin-right: 15px;
 }
 .form-group input:focus{
     outline: none;

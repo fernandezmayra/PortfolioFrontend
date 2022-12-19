@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
+import { ImageService } from 'src/app/service/image.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
@@ -10,8 +12,13 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 })
 export class EditproyectoComponent implements OnInit {
   proyecto: Proyecto = null;
+  url: string = '';
 
-  constructor(private proyectoService: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private proyectoService: ProyectoService,
+     private activatedRouter: ActivatedRoute, 
+     private router: Router,
+     public imageService: ImageService,
+     private storage: Storage) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -23,10 +30,15 @@ export class EditproyectoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+    
   }
 
-  onUpdate(): void{
+  async onUpdate(){
     const id = this.activatedRouter.snapshot.params['id'];
+    const name = "proyecto_" + id;
+    const imagesRef = ref(this.storage, 'imagen/' + name)
+    this.url = await getDownloadURL(imagesRef);
+    this.proyecto.imgProy =  this.url;
     this.proyectoService.update(id, this.proyecto).subscribe(
       data => {
         this.router.navigate(['']);
@@ -35,6 +47,22 @@ export class EditproyectoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+   
+  }
+  
+  uploadImage($event:any){
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "proyecto_" + id;
+    this.imageService.uploadImage($event, name);
   }
 
+  
 }
+
+
+
+ 
+   
+    
+     
+ 

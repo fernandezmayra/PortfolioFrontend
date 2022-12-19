@@ -1,37 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/storage';
+import { Storage, ref, uploadBytes, list, getDownloadURL, deleteObject } from '@angular/fire/storage';
+import { finalize } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImageService {
-  images: string[];
 
-  constructor(private storage: Storage) { 
-    this.images = [];
+  constructor(public storage: Storage) { 
+    
   }
   
   public uploadImage($event: any, name: string){
     const file = $event.target.files[0]
     const imgRef = ref(this.storage, `imagen/` + name);
     uploadBytes(imgRef, file)
-    .then(response => {this.getImages()})
-    
+    .then(response => {console.log(response)})
     .catch(error => console.log(error))
   }
 
-  getImages(){
-    const imagesRef = ref(this.storage, 'imagen')
-    list(imagesRef)
-    .then(async response => {
-      this.images = [];
-      for(let item of response.items){
-        const url = await getDownloadURL(item);
-        this.images.push(url);
-      }
-    })
-    .catch(error => console.log(error))
+  public deleteImage(name: string){
+    const imagesRef = ref(this.storage, 'imagen/' + name);
+    deleteObject(imagesRef);
   }
- 
-  
+
 }

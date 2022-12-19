@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
+import { ImageService } from 'src/app/service/image.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
@@ -12,14 +14,24 @@ export class NewproyectoComponent implements OnInit {
   nombreProy: string = "";
   descProy: string = "";
   imgProy: string = "";
-
-  constructor(private proyectoService: ProyectoService, private router: Router) { }
+  id: string = "";
+  url: string = "";
+  name: string = "";
+  
+  constructor(private proyectoService: ProyectoService,
+              private router: Router,
+              private activatedRouter: ActivatedRoute,
+              public imageService: ImageService,
+              private storage: Storage) { }
 
   ngOnInit(): void {
   }
 
-  onCreate():void {
-    const proyecto = new Proyecto(this.nombreProy, this.descProy, this.imgProy);
+  async onCreate(){
+    const imagesRef = ref(this.storage, 'imagen/' + this.name)
+    this.url = await getDownloadURL(imagesRef);
+    this.imgProy =  this.url;
+    const proyecto = new Proyecto(this.id, this.nombreProy, this.descProy, this.imgProy);
     this.proyectoService.save(proyecto).subscribe(
       data => {
         alert("Proyecto añadido correctamente");
@@ -29,5 +41,15 @@ export class NewproyectoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+
+  uploadImage($event:any){
+    this.id = this.generarId();
+    this.name = "proyecto_" + this.id;
+    this.imageService.uploadImage($event, this.name);
+  }
+
+  generarId = () =>{
+    return Math.random().toString(30).substring(2);
   }
 }

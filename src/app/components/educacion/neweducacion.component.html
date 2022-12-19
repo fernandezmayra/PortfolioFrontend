@@ -17,10 +17,17 @@
                     <label for="fin">Año fin</label>
                     <input type="text" class="form-control" id="fin" name="fin" [(ngModel)] = "fin" required>
                 </div>
-                <div class="add">
-                    <button class="btn btn-danger">
-                        Agregar educación
-                    </button>
+                <div class="botones">
+                    <div class="add">
+                        <button class="btn btn-dark">
+                            Agregar educación
+                        </button>
+                    </div>
+                    <div class="cancel">
+                        <button class="btn btn-danger" routerLink="">
+                            Cancelar
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

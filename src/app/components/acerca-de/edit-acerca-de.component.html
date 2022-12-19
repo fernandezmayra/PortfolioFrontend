@@ -29,10 +29,17 @@
                     <label for="img">Imagen Background</label>
                     <input type="file" class="form-control" id="imgBackground" name="imgBackground" [(ngModel)] = "persona.imgBackground" (change)="uploadImage($event, 'imgBackground')" accept=".jpg, .jpeg, .png" required>
                 </div>
-                <div class="update">
-                    <button class="btn btn-danger">
-                        Editar persona
-                    </button>
+                <div class="botones">
+                    <div class="update">
+                        <button class="btn btn-dark">
+                            Editar persona
+                        </button>
+                    </div>
+                    <div class="cancel">
+                        <button class="btn btn-danger" routerLink="">
+                            Cancelar
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

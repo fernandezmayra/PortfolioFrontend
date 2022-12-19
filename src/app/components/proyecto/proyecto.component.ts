@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
+import { ImageService } from 'src/app/service/image.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
+
 
 @Component({
   selector: 'app-proyecto',
@@ -11,7 +14,11 @@ import { TokenService } from 'src/app/service/token.service';
 export class ProyectoComponent implements OnInit {
   proyecto: Proyecto[] = [];
 
-  constructor(private proyectoService: ProyectoService, private tokenService: TokenService) { }
+  constructor(private proyectoService: ProyectoService, 
+              private tokenService: TokenService,
+              public imageService: ImageService,
+              private activatedRouter: ActivatedRoute) { }
+
   isLogged = false;
 
   ngOnInit(): void {
@@ -31,11 +38,13 @@ export class ProyectoComponent implements OnInit {
     )
   }
 
-  delete(id?: number){
+  delete(id?: string){
     if(id != undefined){
+      const name = "proyecto_" + id;
       this.proyectoService.delete(id).subscribe(
         data => {
           this.cargarProyecto();
+          this.imageService.deleteImage(name);
         }, err => {
           alert("No se pudo eliminar");
         }

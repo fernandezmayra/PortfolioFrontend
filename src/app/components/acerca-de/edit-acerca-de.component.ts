@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
 import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
 import { ImageService } from 'src/app/service/image.service';
@@ -11,11 +12,13 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAcercaDeComponent implements OnInit {
   persona: persona = null;
+  url: string = '';
 
   constructor(private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
     private router: Router,
-    public imageService: ImageService) { }
+    public imageService: ImageService,
+    private storage: Storage) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -29,10 +32,16 @@ export class EditAcercaDeComponent implements OnInit {
     )
   }
 
-  onUpdate(): void {
+  async onUpdate(){
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imageService.images[0];
-    this.persona.imgBackground = this.imageService.images[1];
+    const name = "perfil_" + id + "_img";
+    const imgRef = ref(this.storage, 'imagen/' + name)
+    this.url = await getDownloadURL(imgRef);
+    this.persona.img =  this.url;
+    const nombre = "perfil_" + id + "_imgBackground";
+    const imagesRef = ref(this.storage, 'imagen/' + nombre)
+    this.url = await getDownloadURL(imagesRef);
+    this.persona.imgBackground =  this.url;
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);

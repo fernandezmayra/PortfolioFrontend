@@ -3,7 +3,7 @@
         <h1 id="skills">MY SKILLS</h1>
     </div>
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 boton">
-        <button type="button" routerLink="/newskill" class="btn btn-danger" *ngIf="isLogged">Agregar Skill</button>
+        <button type="button" routerLink="/newskill" class="btn btn-light" *ngIf="isLogged">Agregar Skill</button>
     </div>
     <div class="container">
         <div class="card" *ngFor="let skill of skill">
@@ -20,7 +20,7 @@
             </div>
             <div>
                 <td *ngIf="isLogged">
-                    <button class="btn btn-danger" routerLink="/editskill/{{skill.id}}">
+                    <button class="btn btn-secondary" routerLink="/editskill/{{skill.id}}">
                         <i class="bi bi-pencil"></i></button>
                 </td>
                 <td *ngIf="isLogged">

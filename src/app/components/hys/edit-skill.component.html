@@ -9,10 +9,17 @@
                     <label for="porcentaje">Ingrese el porcentaje</label>
                     <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)] = "skill.porcentaje" required>
                 </div>
-                <div class="update">
-                    <button class="btn btn-danger">
-                        Actualizar
-                    </button>
+                <div class="botones">
+                    <div class="update">
+                        <button class="btn btn-dark">
+                            Actualizar
+                        </button>
+                    </div>
+                    <div class="cancel">
+                        <button class="btn btn-danger" routerLink="">
+                            Cancelar
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

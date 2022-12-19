@@ -3,7 +3,7 @@
     <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 container">
         <h1 id="education">EDUCATION</h1>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <button type="button" class="btn btn-danger" routerLink="/nuevaedu" *ngIf="isLogged">
+            <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educación
             </button>
         </div>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="botones">        
                     <div *ngIf="isLogged">
-                        <button class="btn btn-danger" routerLink="/editedu/{{Educacion.id}}">
+                        <button class="btn btn-secondary" routerLink="/editedu/{{Educacion.id}}">
                             <i class="bi bi-pencil"></i></button>
                     </div>
                     <div *ngIf="isLogged">
