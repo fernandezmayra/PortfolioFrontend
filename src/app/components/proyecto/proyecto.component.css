@@ -3,15 +3,17 @@
     margin:0;
     padding:0;
     background-color: black;
-    min-height: 100vh;
 }
 .row{
     background-color: #000;
     font-family: ITC Benguiat;
-    color:white;
-    width:100vw;
-    margin:0;
-    padding:0;
+    color: white;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
 }
 img{
     width:100%;
@@ -72,12 +74,10 @@ h1{
 .btn-light{
     font-family: ITC Benguiat;
 }
-@media (max-width:991px){
-    .proy{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+.proy{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
 
