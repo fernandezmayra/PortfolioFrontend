@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = 'http://localhost:8080/proyectos/';
+  URL = 'https://yoprogramo-fernandezmayra.koyeb.app/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 
