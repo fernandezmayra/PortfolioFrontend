@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./edit-acerca-de.component.css']
 })
 export class EditAcercaDeComponent implements OnInit {
-  persona: persona = null;
+  persona: persona;
   url: string = '';
 
   constructor(private activatedRouter: ActivatedRoute,
