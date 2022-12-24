@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Proyecto } from '../model/proyecto';
 
 
@@ -8,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = 'https://yoprogramo-fernandezmayra.koyeb.app/proyectos/';
+  URL = environment.URL + 'proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -9,5 +9,6 @@ export const environment = {
     measurementId: 'G-LEP1KXWN4R',
     locationId: 'nam5 (us-central)'
   },
-  production: true
+  production: true,
+  URL: 'https://portfoliobackend-production-7b05.up.railway.app/'
 };
