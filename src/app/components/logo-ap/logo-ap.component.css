@@ -31,10 +31,10 @@ label:hover{
 .btn{
     margin-right:3px;
     margin-left:5px;
-    font-family: ITC Benguiat;
+    font-family:'ITC Benguiat','Averia Serif Libre';
 }
 .btn:hover{
-    color: red;
+    color:red;
     background-color:transparent;
     border-color:red;
 }
@@ -59,8 +59,8 @@ label:hover{
     background:black;
     height:100vh;
     position:relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
+    transition:all 500ms ease;
+    transform:translateX(-100%);
 }
 #btn-menu:checked ~ .container-menu .cont-menu{
     transform: translateX(0%);
@@ -70,11 +70,11 @@ label:hover{
 }
 .cont-menu nav a{
     display:block;
-    text-decoration: none;
+    text-decoration:none;
     padding:20px;
     color:white;
-    font-family: ITC Benguiat;
-    transition: all 400ms ease;
+    font-family:'ITC Benguiat','Averia Serif Libre';
+    transition:all 400ms ease;
 }
 .cont-menu label{
     position:absolute;
