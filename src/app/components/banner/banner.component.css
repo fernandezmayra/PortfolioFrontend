@@ -50,38 +50,15 @@
                0 0 75px #FF1177;
   }
   }
-  @media (max-width:850px){
-    h1{
-      font-size:50px;
-    }
-    }
-    @media (max-width:770px){
-    h1{
-      font-size:45px;
-    }
-    }
-    @media (max-width:695px){
+  @media (max-width:414px){
     h1{
       font-size:40px;
     }
     }
-    @media (max-width:620px){
-    h1{
-      font-size:35px;
-    }
-    }
-    @media (max-width:545px){
+  @media (max-width:280px){
     h1{
       font-size:30px;
     }
-    }
-    @media (max-width:465px){
-    h1{
-      font-size:25px;
-    }
-    }
-    @media (max-width:390px){
-    h1{
-      font-size:20px;
-    }
-    }
+  }
+    
+   
