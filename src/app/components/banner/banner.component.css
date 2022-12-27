@@ -49,7 +49,7 @@
                0 0 75px #FF1177;
   }
   }
-  @media (max-width:414px){
+  @media (max-width:428px){
     h1{
       font-size:40px;
     }
