@@ -41,10 +41,11 @@ export class EditproyectoComponent implements OnInit {
     this.proyecto.imgProy =  this.url;
     this.proyectoService.update(id, this.proyecto).subscribe(
       data => {
+        alert("Proyecto modificado");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar el proyecto");
-        this.router.navigate(['']);
+          alert("Error al modificar el proyecto");
+          this.router.navigate(['']);
       }
     )
    

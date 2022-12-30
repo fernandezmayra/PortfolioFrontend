@@ -39,7 +39,7 @@ export class ProyectoComponent implements OnInit {
   }
 
   delete(id?: string){
-    if(id != undefined){
+    if(confirm('Seguro que desea eliminar?')){
       const name = "proyecto_" + id;
       this.proyectoService.delete(id).subscribe(
         data => {

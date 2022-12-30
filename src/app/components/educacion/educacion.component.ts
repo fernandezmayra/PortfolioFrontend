@@ -33,7 +33,7 @@ export class EducacionComponent implements OnInit {
   }
 
   delete(id?: number){
-    if(id != undefined){
+    if(confirm('Seguro que desea eliminar?')){
       this.educacionS.delete(id).subscribe(
         data => {
           this.cargarEducacion();

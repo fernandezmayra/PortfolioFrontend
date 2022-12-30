@@ -32,7 +32,7 @@ export class HysComponent implements OnInit {
   }
 
   delete(id: number){
-    if(id != undefined){
+    if(confirm('Seguro que desea eliminar?')){
       this.skillS.delete(id).subscribe(
         data => {
           this.cargarSkills();

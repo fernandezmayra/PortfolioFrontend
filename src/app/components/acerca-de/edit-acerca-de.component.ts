@@ -44,6 +44,7 @@ export class EditAcercaDeComponent implements OnInit {
     this.persona.imgBackground =  this.url;
     this.personaService.update(id, this.persona).subscribe(
       data => {
+        alert("Persona modificada");
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar la persona");
