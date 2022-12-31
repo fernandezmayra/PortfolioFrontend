@@ -11,8 +11,8 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class NeweducacionComponent implements OnInit {
   nombreE: string = "";
   descripcionE: string = "";
-  inicio: number;
-  fin: number;
+  inicio: string = "";
+  fin: string = "";
 
   constructor(private educacionS: EducacionService, private router: Router) { }
 

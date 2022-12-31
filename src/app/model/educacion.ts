@@ -2,10 +2,10 @@ export class Educacion {
     id?: number;
     nombreE: string;
     descripcionE: string;
-    inicio: number;
-    fin: number;
+    inicio: string;
+    fin: string;
 
-    constructor(nombreE: string, descripcionE: string, inicio: number, fin: number){
+    constructor(nombreE: string, descripcionE: string, inicio: string, fin: string){
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.inicio = inicio;
