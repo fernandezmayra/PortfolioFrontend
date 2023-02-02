@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/service/token.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-logo-ap',
@@ -9,8 +11,9 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class LogoAPComponent implements OnInit {
   isLogged = false;
+  persona: persona = new persona("","","","","","","","","","");
 
-  constructor(private router:Router, private tokenService: TokenService) { }
+  constructor(private router:Router, private tokenService: TokenService, public personaService: PersonaService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -18,6 +21,7 @@ export class LogoAPComponent implements OnInit {
     }else{
       this.isLogged = false;
     }
+    this.cargarPersona();
   }
 
   onLogOut():void{
@@ -27,5 +31,11 @@ export class LogoAPComponent implements OnInit {
 
   login(){
     this.router.navigate(['/login'])
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {this.persona = data}
+    )
   }
 }
