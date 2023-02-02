@@ -11,7 +11,7 @@ export class persona{
     facebook: string;
     instagram: string;
 
-    constructor(nombre: string, apellido: string, descripcion: string, img: string, titulo: string, email: string, imgBackground: string, github: string, facebook: string; instagram: string){
+    constructor(nombre: string, apellido: string, descripcion: string, img: string, titulo: string, email: string, imgBackground: string, github: string, facebook: string, instagram: string){
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
