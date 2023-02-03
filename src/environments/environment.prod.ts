@@ -10,5 +10,5 @@ export const environment = {
     locationId: 'nam5 (us-central)'
   },
   production: true,
-  URL: 'https://portfoliobackend-production-1a3f.up.railway.app/'
+  URL: 'https://portfoliobackend-production-7b05.up.railway.app/'
 };
