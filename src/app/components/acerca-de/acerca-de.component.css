@@ -27,8 +27,9 @@ h1{
     color:#fff;
 }
 #fotodeperfil{
-  max-width:300px;
+  max-width:240px;
   max-height:300px;
+  border-radius:50%;
 }
 #about:before {       
     display: block;       
@@ -54,8 +55,6 @@ h1{
   }
   #fotodeperfil{
     margin-top:50px;
-    width:200px;
-    height:280px;
     margin-bottom:50px;
   }
 }
