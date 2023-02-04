@@ -19,7 +19,7 @@ export class persona{
         this.titulo = titulo;
         this.email = email;
         this.imgBackground = imgBackground;
-        this.twitter = github;
+        this.twitter = twitter;
         this.facebook = facebook;
         this.instagram = instagram;
     }
